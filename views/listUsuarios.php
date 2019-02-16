@@ -37,13 +37,6 @@
 </div>
   <a class="btn btn-success" href="<?php echo BASE_URL?>home/cadastro">+ Usuario</a>
 </div>
-
-       <!--- <a href="<?php echo BASE_URL?>home/gerarPdf" target="_blank" class="btn btn-info btn-sm">Visualizar PDF</a>
-        <a href="<?php echo BASE_URL?>home/gerarTxt" class="btn btn-primary btn-sm">Exportar TXT</a>
-        <a href="<?php echo BASE_URL?>home/gerarExcel" class="btn btn-secondary btn-sm">Exportar CSV</a>
-        --->
-        
-        
         <table class="table table-striped mt-3">
         <thead>        
             <tr>            
