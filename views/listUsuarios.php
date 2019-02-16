@@ -91,7 +91,7 @@ function del(id){
     swal({
         title: "Deseja Excluir este Usuario?",      
         icon: "warning",
-        buttons: true,
+         buttons: ["NÃO","SIM"],
         dangerMode: true,
       })
       .then((willDelete) => {        
