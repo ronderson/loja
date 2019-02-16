@@ -89,15 +89,14 @@
 <script>
 function del(id){
     swal({
-        title: "Are you sure?",
-        text: "Once deleted, you will not be able to recover this imaginary file!",
+        title: "Deseja Excluir este Usuario?",      
         icon: "warning",
         buttons: true,
         dangerMode: true,
       })
       .then((willDelete) => {        
         if (willDelete) {            
-          swal("Poof! Your imaginary file has been deleted!" + id, {
+          swal("Usuario Excluido Com Sucesso", {
             icon: "success",            
           }).then(()=>{
             location.href="<?php echo BASE_URL?>home/delUsuario/"+ id;
