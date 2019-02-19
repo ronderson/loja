@@ -35,7 +35,7 @@
               <select id="status"  name="status" class="form-control" required>
                 <option selected  value="">escolhar um status</option>
                 <option value="1">Ativo</option>
-                <option value="0">Desativo</option>
+                <option value="0">Desativado</option>
               </select>
             </div> 
             <div class="form-group col-md-6">              
