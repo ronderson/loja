@@ -3,11 +3,14 @@
 class homeController extends Controller{        
         
     public function index(){   
+        $this->listarUsuarios();
+    }   
+    public function listarUsuarios(){
         $dados = array(); 
         $usuarios =  new Usuario();
         $dados['usuarios'] = $usuarios->getUsuarios();               
         $this->loadTemplate('listUsuarios',$dados);
-    }    
+    }
     public function cadastro(){
         $dados = array();
         $usuario = new Usuario();
@@ -19,9 +22,9 @@ class homeController extends Controller{
             $senha = addslashes($_POST['senha']);
             $status_usuario = addslashes($_POST['status']);
             $perfil = addslashes($_POST['perfil']);
-           if($usuario->addUsuario($nome_usuario,$email,$login,$senha,$status_usuario,$perfil)){               
-            $dados['msg'] = 'add_ok';            
-          }
+            $msg = $usuario->addUsuario($nome_usuario,$email,$login,$senha,$status_usuario,$perfil);              
+            $dados['msg'] = $msg;
+         
         }
          $this->loadTemplate('addUsuario',$dados); 
     }
@@ -63,7 +66,7 @@ class homeController extends Controller{
         $pdf->Cell(100,7,"Nome",1,0,"C");
         $pdf->Cell(60,7,"Perfil",1,0,"C");
         $pdf->Ln();
-
+        
         foreach($usuario as $user):
             $pdf->Cell(100,7,utf8_decode($user['nome']),1,0,"C");
             $pdf->Cell(60,7,utf8_decode($user['perfil']),1,0,"C");
