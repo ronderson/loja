@@ -1,3 +1,13 @@
+-------tecnologias usadas-------
+-html5
+-css3
+-boostrap 4
+-php
+-javascript
+-jquery
+-sweetalert para os alert
+-postgresql
+
 -----------banco de dados-------------
 
 para configurar o banco de dados 
